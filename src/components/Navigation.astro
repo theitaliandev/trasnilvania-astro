@@ -1,0 +1,64 @@
+---
+const MENU = [
+    {
+        name: 'Cosa vedere in Transilvania?',
+        url: '/cosa-vedere-in-transilvania/'
+    },
+    {
+        name: 'Castello di Dracula',
+        url: '/castello-di-dracula/'
+    },
+    {
+        name: 'Brasov',
+        url: '/brasov/'
+    },
+    {
+        name: 'Cluj-Napoca',
+        url: '/cluj-napoca/'
+    },
+]
+---
+
+<header x-data="{menuOpen: false}" class="w-screen h-auto bg-blue-700 text-white p-6 flex flex-row justify-between items-center">
+
+    <!-- Logo/Brand -->
+    <h1 class="text-3xl font-sans font-bold"><a href="/">Transilvania</a></h1>
+    <!-- Logo/Brand -->
+
+    <!-- Navigation Menu -->
+    <nav class="hidden lg:block text-md space-x-6 font-mono font-semibold">
+            {MENU.map(item => (
+              <a class="hover:underline" href={item.url}>{item.name}</a>
+            ))}
+    </nav>
+    <!-- Navigation Menu -->
+
+    <!-- Hamburger Button -->
+    <svg @click="menuOpen = ! menuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:hidden w-8 h-8 cursor-pointer">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg> 
+    <!-- Hamburger Button -->
+
+    <!-- Mobile Menu -->
+    <div x-show="menuOpen" class="absolute inset-0 bg-blue-600 overflow-hidden p-10">
+
+        <!-- Close Button -->
+        <div @click="menuOpen = false" class="absolute right-10 mt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <!-- Close Button -->
+
+        <!-- Mobile Navigation Menu -->
+        <nav class="w-full h-full flex flex-col mt-40 items-center text-center text-2xl font-mono font-bold space-y-14">
+                {MENU.map(item => (
+                    <a class="hover:underline" href={item.url}>{item.name}</a>
+                ))}
+        </nav>
+        <!-- Mobile Navigation Menu -->
+        
+    </div>
+    <!-- Mobile Menu -->
+
+</header>
