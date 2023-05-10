@@ -1,0 +1,20 @@
+{
+    "main": [
+        {
+            "name": "Cosa vedere in Transilvania?",
+            "url": "/cosa-vedere-in-transilvania/"
+        },
+        {
+            "name": "Castello di Dracula",
+            "url": "/castello-di-dracula/"
+        },
+        {
+            "name": "Brasov",
+            "url": "/brasov/"
+        },
+        {
+            "name": "Cluj-Napoca",
+            "url": "/cluj-napoca/"
+        }
+    ]
+}
