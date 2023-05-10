@@ -29,7 +29,7 @@ const MENU = [
     <title>Transilvania | Homepage</title>
   </head>
   <body>
-<div class="min-h-screen relative">
+<div class="min-h-screen min-w-screen relative">
 <header x-data="{atTop: false}" 
     class="fixed top-0 left-0 right-0 z-30 text-white p-6 flex flex-row justify-between items-center transition duration-300 ease-in-out"
     :class="{'bg-black shadow-2xl': atTop }"
@@ -51,7 +51,7 @@ const MENU = [
 <div class="absolute z-20 inset-0 flex items-center justify-center p-6">
     <div class="flex flex-col gap-6 lg:gap-10 items-center justify-center text-center p-10 text-white">
         <h2 class="text-4xl md:text-7xl lg:text-9xl">Transilvania</h2>
-        <h3 class="text-2xl md:text-4xl lg:text-6xl font-mono">Lasciati travolgere dalla Magia...</h3>
+        <h3 class="text-2xl md:text-4xl font-mono">Lasciati travolgere dalla Magia...</h3>
     </div>
 </div>
 
@@ -60,7 +60,7 @@ const MENU = [
         autoplay
         loop
         muted
-        class="absolute min-h-screen inset-0 object-cover z-0"
+        class="absolute min-h-screen w-screen inset-0 object-cover z-0"
       >
         <source
           src="video-transilvania.mp4"
